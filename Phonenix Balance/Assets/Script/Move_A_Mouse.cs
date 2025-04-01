@@ -7,7 +7,6 @@ public class Move_A_Mouse : MonoBehaviour
     private bool isDragging = false;
     private Vector3 offset;
 
-    // Update is called once per frame
     void Update()
     {
         // ¼ì²âÊó±ê×ó¼ü°´ÏÂ

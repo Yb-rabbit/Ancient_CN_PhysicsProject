@@ -6,6 +6,6 @@ PhysicsMaterial2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WoodB
-  friction: 0.8
-  bounciness: 0.1
+  m_Name: LeverA
+  friction: 0.55
+  bounciness: 0.02
