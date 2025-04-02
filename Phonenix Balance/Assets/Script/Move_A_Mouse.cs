@@ -6,6 +6,12 @@ public class Move_A_Mouse : MonoBehaviour
 {
     private bool isDragging = false;
     private Vector3 offset;
+    private Rigidbody2D rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
@@ -22,6 +28,12 @@ public class Move_A_Mouse : MonoBehaviour
             {
                 isDragging = true;
                 offset = transform.position - mousePosition;
+
+                // 禁用刚体状态
+                if (rb != null)
+                {
+                    rb.isKinematic = true;
+                }
             }
         }
 
@@ -29,6 +41,12 @@ public class Move_A_Mouse : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             isDragging = false;
+
+            // 重新启用刚体状态
+            if (rb != null)
+            {
+                rb.isKinematic = false;
+            }
         }
 
         // 拖动物体
