@@ -303,8 +303,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeSceneButton: {fileID: 1619494883}
-  targetScene: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
-  targetSceneName: SampleScene
+  targetScene: {fileID: 102900000, guid: a3104c0b896e81a4bafe2c940139a545, type: 3}
+  targetSceneName: IntroRM
 --- !u!1 &593603203
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,6 +424,7 @@ RectTransform:
   - {fileID: 703878027}
   - {fileID: 1061265752}
   - {fileID: 926626009}
+  - {fileID: 938067833}
   m_Father: {fileID: 1330241496}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -560,8 +561,9 @@ GameObject:
   - component: {fileID: 892254874}
   - component: {fileID: 892254873}
   - component: {fileID: 892254872}
+  - component: {fileID: 892254875}
   m_Layer: 5
-  m_Name: Button (inrto)
+  m_Name: Button (Exit)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -631,7 +633,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 892254873}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 892254875}
+        m_TargetAssemblyTypeName: ExitGame, Assembly-CSharp
+        m_MethodName: OnExitButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &892254873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -670,6 +684,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892254870}
   m_CullTransparentMesh: 1
+--- !u!114 &892254875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892254870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d16db725e999e54e91e6d621448073f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeImage: {fileID: 938067834}
+  fadeDuration: 1
+  delayBeforeExit: 0.5
 --- !u!1 &926626008
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,6 +777,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926626008}
+  m_CullTransparentMesh: 1
+--- !u!1 &938067832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 938067833}
+  - component: {fileID: 938067835}
+  - component: {fileID: 938067834}
+  m_Layer: 5
+  m_Name: ImageBlack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &938067833
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938067832}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 594815906}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000019073, y: -0.000019073}
+  m_SizeDelta: {x: 2158.996, y: 1203.9468}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &938067834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938067832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &938067835
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938067832}
   m_CullTransparentMesh: 1
 --- !u!1 &1061265751
 GameObject:
@@ -1501,7 +1605,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4F5C\u54C1\u4ECB\u7ECD  "
+  m_Text: "\u9000\u51FA\u6E38\u620F  "
 --- !u!222 &1437339814
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1722,7 +1826,6 @@ GameObject:
   - component: {fileID: 1665938656}
   - component: {fileID: 1665938659}
   - component: {fileID: 1665938658}
-  - component: {fileID: 1665938657}
   m_Layer: 5
   m_Name: ButtonStart
   m_TagString: Untagged
@@ -1749,21 +1852,6 @@ RectTransform:
   m_AnchoredPosition: {x: -122.8, y: 0}
   m_SizeDelta: {x: 90, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1665938657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665938655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84e6a7493c5d3c1458e945f238f31de3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  changeSceneButton: {fileID: 892254872}
-  targetScene: {fileID: 102900000, guid: a3104c0b896e81a4bafe2c940139a545, type: 3}
-  targetSceneName: IntroRM
 --- !u!114 &1665938658
 MonoBehaviour:
   m_ObjectHideFlags: 0
