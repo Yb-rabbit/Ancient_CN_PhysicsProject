@@ -34,7 +34,7 @@ public class ExitGame : MonoBehaviour
             yield return null;
         }
 
-        // 等待一段时间以确保图像完全变黑
+        // 等待一段时间以确保图像播放
         yield return new WaitForSeconds(delayBeforeExit);
 
         // 退出游戏

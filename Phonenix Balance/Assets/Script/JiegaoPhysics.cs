@@ -10,7 +10,11 @@ public class JiegaoPhysics : MonoBehaviour
     [Range(10, 60)]
     public float swingAngle = 30f; // 控制摆动幅度
 
+    [Tooltip("恢复初始状态的速度")]
+    public float recoverySpeed = 2f;
+
     private new HingeJoint2D hingeJoint;
+    private Quaternion initialRotation; // 初始旋转
 
     void Start()
     {
@@ -27,16 +31,21 @@ public class JiegaoPhysics : MonoBehaviour
         limits.min = -swingAngle;
         limits.max = swingAngle;
         hingeJoint.limits = limits;
+
+        // 记录初始旋转
+        initialRotation = leverArm.transform.rotation;
+
+        // 始终启用 HingeJoint2D
+        hingeJoint.enabled = true;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void Update()
     {
-        // 当有物体碰撞时，施加力
-        Rigidbody2D rb = collision.rigidbody;
-        if (rb != null)
-        {
-            Vector2 force = collision.relativeVelocity * rb.mass;
-            leverArm.AddForceAtPosition(force, collision.contacts[0].point);
-        }
+        // 杠杆始终保持摆动，无需检测碰撞
+        leverArm.transform.rotation = Quaternion.Lerp(
+            leverArm.transform.rotation,
+            initialRotation,
+            recoverySpeed * Time.deltaTime
+        );
     }
 }
