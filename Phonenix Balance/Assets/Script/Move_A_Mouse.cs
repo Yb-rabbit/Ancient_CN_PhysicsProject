@@ -48,10 +48,10 @@ public class Move_A_Mouse : MonoBehaviour
             isDragging = true;
             offset = transform.position - mousePosition;
 
-            // 禁用刚体状态
+            // 禁用刚体的重力，但保持物理模拟
             if (rb != null)
             {
-                rb.isKinematic = true;
+                rb.gravityScale = 0;
             }
         }
     }
@@ -60,17 +60,27 @@ public class Move_A_Mouse : MonoBehaviour
     {
         isDragging = false;
 
-        // 重新启用刚体状态
+        // 恢复刚体的重力
         if (rb != null)
         {
-            rb.isKinematic = false;
+            rb.gravityScale = 1;
         }
     }
 
     private void DragObject()
     {
         Vector3 mousePosition = GetMouseWorldPosition();
-        transform.position = mousePosition + offset;
+        Vector3 targetPosition = mousePosition + offset;
+
+        // 使用 Rigidbody2D 的 MovePosition 方法移动物体
+        if (rb != null)
+        {
+            rb.MovePosition(targetPosition);
+        }
+        else
+        {
+            transform.position = targetPosition;
+        }
     }
 
     private Vector3 GetMouseWorldPosition()
