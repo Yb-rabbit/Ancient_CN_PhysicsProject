@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Balance1.unity
     guid: 9d30ccdc8755b0541887b18bbd12970d
+  - enabled: 1
+    path: Assets/Scenes/Balance2.unity
+    guid: 879c45d555f5a394f9386563a62c5d25
   m_configObjects: {}
