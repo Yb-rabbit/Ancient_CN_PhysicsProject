@@ -69,9 +69,6 @@ public class ChangeScenes : MonoBehaviour
         // 等待展示时间
         yield return new WaitForSeconds(displayDuration);
 
-        // 淡出图片
-        yield return StartCoroutine(FadeImage(1f, 0f, fadeDuration));
-
         // 跳转场景
         if (!string.IsNullOrEmpty(targetSceneName))
         {
