@@ -9,8 +9,8 @@ public class Compass : MonoBehaviour
     {
         if (playerTransform != null && compassUI != null)
         {
-            // 获取玩家的前向向量
-            Vector2 playerForward = playerTransform.up;
+            // 玩家的前向向量
+            Vector2 playerForward = -playerTransform.up;
 
             // 计算玩家朝向的角度
             float angle = Mathf.Atan2(playerForward.y, playerForward.x) * Mathf.Rad2Deg;
