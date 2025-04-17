@@ -1468,8 +1468,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeSceneButton: {fileID: 1124183110}
-  targetScene: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
-  targetSceneName: SampleScene
+  targetScene: {fileID: 102900000, guid: 9d30ccdc8755b0541887b18bbd12970d, type: 3}
+  targetSceneName: Balance1
   displayImage: {fileID: 844143091}
   fadeDuration: 1
   displayDuration: 3
