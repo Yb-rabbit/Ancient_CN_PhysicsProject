@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 632709}
   - component: {fileID: 632708}
   - component: {fileID: 632711}
+  - component: {fileID: 632712}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -259,6 +260,27 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!95 &632712
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632707}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3b804a9b20726fe43a13c13b1c579b70, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &404932148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,8 +1097,8 @@ AudioSource:
   m_GameObject: {fileID: 1166086274}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: e3beda45ee5ccf34aa7d697f57966704, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5b35908944c2cb74fb052de49b8d3680, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: e554fa81e80519042adeb1317e7b9253, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 0097bd5c0659831409a995b82b88800c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
