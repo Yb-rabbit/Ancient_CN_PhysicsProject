@@ -5,13 +5,9 @@ using System.Collections;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-
 public class ChangeScenes : MonoBehaviour
 {
     public Button changeSceneButton; // 按钮引用
-#if UNITY_EDITOR
-    public SceneAsset targetScene; // 目标场景引用
-#endif
     public string targetSceneName; // 目标场景名称
 
     public Image displayImage; // 需要展示的图片
@@ -20,13 +16,6 @@ public class ChangeScenes : MonoBehaviour
 
     void Start()
     {
-#if UNITY_EDITOR
-        if (targetScene != null)
-        {
-            targetSceneName = targetScene.name;
-        }
-#endif
-
         if (changeSceneButton != null)
         {
             changeSceneButton.onClick.AddListener(ActivateImageAndChangeScene);

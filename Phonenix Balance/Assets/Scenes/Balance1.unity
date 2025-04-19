@@ -934,7 +934,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.053561404, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -945,7 +945,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8928772, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1472114195
 SpriteRenderer:
@@ -1146,6 +1146,10 @@ PrefabInstance:
       propertyPath: targetScene
       value: 
       objectReference: {fileID: 102900000, guid: 9d30ccdc8755b0541887b18bbd12970d, type: 3}
+    - target: {fileID: 1796254880850195328, guid: d661ba936373e954fb10447d43180513, type: 3}
+      propertyPath: targetSceneName
+      value: Ani2
+      objectReference: {fileID: 0}
     - target: {fileID: 5372233012321922336, guid: d661ba936373e954fb10447d43180513, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.82900274

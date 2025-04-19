@@ -1067,7 +1067,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 0
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1041762854
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1194,7 +1194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 230957211}
   enableFollow: 1
-  smoothSpeed: 5
+  smoothSpeed: 3
   maxRadius: 50
 --- !u!1 &1443049577
 GameObject:
