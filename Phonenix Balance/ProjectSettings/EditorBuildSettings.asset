@@ -15,17 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroRM.unity
     guid: a3104c0b896e81a4bafe2c940139a545
   - enabled: 1
+    path: Assets/Scenes/Balance1.unity
+    guid: 53cbfdbe24bda67439a76bd4cee2c907
+  - enabled: 1
     path: Assets/Scenes/Balance2.unity
     guid: 9d30ccdc8755b0541887b18bbd12970d
-  - enabled: 1
-    path: Assets/Scenes/Balance4.unity
-    guid: 879c45d555f5a394f9386563a62c5d25
   - enabled: 1
     path: Assets/Scenes/Balance3.unity
     guid: 9ea217c04aef7cc4a89c9bdc7d1480bc
   - enabled: 1
-    path: Assets/Scenes/Balance1.unity
-    guid: 53cbfdbe24bda67439a76bd4cee2c907
+    path: Assets/Scenes/Balance4.unity
+    guid: 879c45d555f5a394f9386563a62c5d25
   - enabled: 1
     path: Assets/Scenes/Ani1.unity
     guid: bdfc88d7ef8d1d84a840fa3aaf1f361d
