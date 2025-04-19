@@ -192,7 +192,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u201C\u51E4\u821E\u4E5D\u5929\uFF0C\u8861\u5E73\u4E07\u7269\u201D"
+  m_Text: "\u201C\u51FB\u77F3\u89C1\u706B\uFF0C\u591C\u4EA6\u6709\u5149\u201D"
 --- !u!222 &39124463
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1468,8 +1468,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeSceneButton: {fileID: 1124183110}
-  targetScene: {fileID: 102900000, guid: 9d30ccdc8755b0541887b18bbd12970d, type: 3}
-  targetSceneName: Balance1
+  targetScene: {fileID: 102900000, guid: bdfc88d7ef8d1d84a840fa3aaf1f361d, type: 3}
+  targetSceneName: Ani1
   displayImage: {fileID: 844143091}
   fadeDuration: 1
   displayDuration: 3

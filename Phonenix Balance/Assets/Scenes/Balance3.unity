@@ -790,7 +790,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 676401008974071432, guid: d661ba936373e954fb10447d43180513, type: 3}
       propertyPath: m_Text
-      value: "\u201C\u51FB\u77F3\u89C1\u706B\uFF0C\u591C\u4EA6\u6709\u5149\u201D"
+      value: "\u201C\u7EA2\u5F15\u8BC6\u5357\uFF0C\u636E\u4EE5\u5B9A\u5411\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 811543075655845075, guid: d661ba936373e954fb10447d43180513, type: 3}
       propertyPath: m_SortingOrder
@@ -799,7 +799,7 @@ PrefabInstance:
     - target: {fileID: 1796254880850195328, guid: d661ba936373e954fb10447d43180513, type: 3}
       propertyPath: targetScene
       value: 
-      objectReference: {fileID: 102900000, guid: 53cbfdbe24bda67439a76bd4cee2c907, type: 3}
+      objectReference: {fileID: 102900000, guid: 879c45d555f5a394f9386563a62c5d25, type: 3}
     - target: {fileID: 1796254880850195328, guid: d661ba936373e954fb10447d43180513, type: 3}
       propertyPath: targetSceneName
       value: Balance4
@@ -1984,7 +1984,7 @@ SceneRoots:
   - {fileID: 688821813}
   - {fileID: 6878285386226467700}
   - {fileID: 318797958}
-  - {fileID: 880493190}
   - {fileID: 8113126809915068123}
   - {fileID: 447068581}
   - {fileID: 1041762856}
+  - {fileID: 880493190}
