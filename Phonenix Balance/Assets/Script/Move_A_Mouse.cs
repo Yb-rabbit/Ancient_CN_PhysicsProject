@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Move_A_Mouse : MonoBehaviour
 {
-    private bool isDragging = false;
-    private Vector3 offset;
-    private Rigidbody2D rb;
-    private Camera mainCamera;
+    private bool isDragging = false; // 是否正在拖拽
+    private Vector3 offset; // 鼠标与物体的偏移量
+    private Rigidbody2D rb; // 刚体组件
+    private Camera mainCamera; // 主摄像机
 
     void Start()
     {
@@ -20,13 +20,7 @@ public class Move_A_Mouse : MonoBehaviour
         // 检测鼠标左键按下
         if (Input.GetMouseButtonDown(0))
         {
-            HandleMouseDown();
-        }
-
-        // 检测鼠标左键松开
-        if (Input.GetMouseButtonUp(0))
-        {
-            HandleMouseUp();
+            ToggleDragging();
         }
 
         // 拖动物体
@@ -36,34 +30,40 @@ public class Move_A_Mouse : MonoBehaviour
         }
     }
 
-    private void HandleMouseDown()
+    private void ToggleDragging()
     {
-        // 获取鼠标位置
-        Vector3 mousePosition = GetMouseWorldPosition();
+        // 切换拖拽状态
+        isDragging = !isDragging;
 
-        // 检测鼠标是否点击在当前物体上
-        Collider2D collider = Physics2D.OverlapPoint(mousePosition);
-        if (collider != null && collider.transform == transform)
+        if (isDragging)
         {
-            isDragging = true;
-            offset = transform.position - mousePosition;
+            // 开始拖拽时，计算鼠标与物体的偏移量
+            Vector3 mousePosition = GetMouseWorldPosition();
+            Collider2D collider = Physics2D.OverlapPoint(mousePosition);
 
-            // 禁用刚体的重力，但保持物理模拟
-            if (rb != null)
+            if (collider != null && collider.transform == transform)
             {
-                rb.gravityScale = 0;
+                offset = transform.position - mousePosition;
+
+                // 禁用刚体的重力，但保持物理模拟
+                if (rb != null)
+                {
+                    rb.gravityScale = 0;
+                }
+            }
+            else
+            {
+                // 如果鼠标未点击在物体上，取消拖拽
+                isDragging = false;
             }
         }
-    }
-
-    private void HandleMouseUp()
-    {
-        isDragging = false;
-
-        // 恢复刚体的重力
-        if (rb != null)
+        else
         {
-            rb.gravityScale = 1;
+            // 停止拖拽时，恢复刚体的重力
+            if (rb != null)
+            {
+                rb.gravityScale = 1;
+            }
         }
     }
 
