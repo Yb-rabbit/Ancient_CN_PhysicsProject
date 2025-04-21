@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ani2.unity
     guid: 47a126a396b30334dbf6162be2dbec02
+  - enabled: 1
+    path: Assets/Scenes/Ani3.unity
+    guid: f6ae0f7bad5aafc40b930f45dc0c36b8
   m_configObjects: {}
