@@ -588,7 +588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 303482485}
   enableFollow: 1
-  smoothSpeed: 1
+  smoothSpeed: 2.2
   maxRadius: 100
 --- !u!1 &610226919
 GameObject:
