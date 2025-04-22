@@ -66,8 +66,8 @@ public class Follow_Point : MonoBehaviour
             // 如果距离超过最大半径，立刻追踪目标位置并清除动能
             if (distanceToTarget > maxRadius)
             {
-                // 直接将物体位置设置为目标位置
-                transform.position = target.position;
+                // 直接将物体位置设置为目标位置，但保持 Z 值不变
+                transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
 
                 // 清除动能
                 if (rb != null)
@@ -78,13 +78,16 @@ public class Follow_Point : MonoBehaviour
             }
             else
             {
-                // 在限制范围内，使用 SmoothDamp 平滑移动到目标位置
-                transform.position = Vector3.SmoothDamp(
+                // 在限制范围内，使用 SmoothDamp 平滑移动到目标位置，但保持 Z 值不变
+                Vector3 targetPosition = Vector3.SmoothDamp(
                     transform.position,
                     target.position,
                     ref currentVelocity,
                     1f / smoothSpeed // 平滑时间，值越小移动越快
                 );
+
+                // 保持 Z 值不变
+                transform.position = new Vector3(targetPosition.x, targetPosition.y, transform.position.z);
             }
 
             // 更新上一次目标位置
