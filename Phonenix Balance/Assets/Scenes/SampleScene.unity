@@ -806,6 +806,7 @@ GameObject:
   - component: {fileID: 840194160}
   - component: {fileID: 840194161}
   - component: {fileID: 840194162}
+  - component: {fileID: 840194163}
   m_Layer: 0
   m_Name: LeverA
   m_TagString: Untagged
@@ -964,6 +965,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200586108d66f0a41b4984cb637f7b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!233 &840194163
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840194157}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 840194161}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
 --- !u!1 &1112104494
 GameObject:
   m_ObjectHideFlags: 0

@@ -70,7 +70,7 @@ public class Colision_Move : MonoBehaviour
         if (isMoving)
         {
             // 按前向方向移动目标物体
-            Vector2 moveDirection = -transform.up; // 2D 前向为 -transform.up
+            Vector2 moveDirection = transform.up; // 2D 前向为 transform.up
             targetRb.velocity = moveDirection * moveSpeed;
         }
         else
