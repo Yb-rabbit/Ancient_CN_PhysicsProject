@@ -4,33 +4,30 @@ using UnityEngine;
 
 public class DestoryTime : MonoBehaviour
 {
-    // 指定的检测物体
     [SerializeField]
     private GameObject targetObject;
 
-    // 倒计时的时间（秒）
     [SerializeField]
     private float countdownTime = 3f;
 
-    // 倒计时结束后需要激活的物体
     [SerializeField]
     private GameObject objectToActivate;
 
-    private Collider2D spriteMaskCollider; // 当前物体的精灵遮罩
-    private Collider2D targetCollider; // 指定物体的碰撞器
-    private bool isCountingDown = false; // 是否正在倒计时
-    private bool isOverlapping = false; // 是否与目标物体有交集
+    private Collider2D spriteMaskCollider;
+    private Collider2D targetCollider;
+    private bool isCountingDown = false;
+    private bool isOverlapping = false;
+
+    private Coroutine countdownCoroutine;
 
     void Start()
     {
-        // 获取当前物体的 Collider2D
         spriteMaskCollider = GetComponent<Collider2D>();
         if (spriteMaskCollider == null)
         {
             Debug.LogError("当前物体缺少 Collider2D 组件！");
         }
 
-        // 获取目标物体的 Collider2D
         if (targetObject != null)
         {
             targetCollider = targetObject.GetComponent<Collider2D>();
@@ -44,7 +41,6 @@ public class DestoryTime : MonoBehaviour
             Debug.LogError("未指定目标物体！");
         }
 
-        // 确保需要激活的物体已禁用
         if (objectToActivate != null)
         {
             objectToActivate.SetActive(false);
@@ -57,15 +53,34 @@ public class DestoryTime : MonoBehaviour
 
     void FixedUpdate()
     {
-        // 持续检测当前物体的精灵遮罩是否与目标物体有交集
-        if (spriteMaskCollider != null && targetCollider != null)
+        if (spriteMaskCollider != null && targetCollider != null && targetCollider.enabled && targetObject.activeInHierarchy)
         {
-            isOverlapping = spriteMaskCollider.IsTouching(targetCollider);
+            bool currentlyOverlapping = spriteMaskCollider.IsTouching(targetCollider);
 
-            if (isOverlapping && !isCountingDown)
+            if (currentlyOverlapping)
             {
-                StartCoroutine(StartCountdown());
+                isOverlapping = true;
+
+                if (!isCountingDown && countdownCoroutine == null)
+                {
+                    countdownCoroutine = StartCoroutine(StartCountdown());
+                }
             }
+            else
+            {
+                isOverlapping = false;
+
+                if (isCountingDown && countdownCoroutine != null)
+                {
+                    StopCoroutine(countdownCoroutine);
+                    countdownCoroutine = null;
+                    isCountingDown = false;
+                }
+            }
+        }
+        else
+        {
+            isOverlapping = false;
         }
     }
 
@@ -73,18 +88,23 @@ public class DestoryTime : MonoBehaviour
     {
         isCountingDown = true;
 
-        // 等待倒计时结束
         yield return new WaitForSeconds(countdownTime);
 
-        // 禁用当前物体
-        gameObject.SetActive(false);
-
-        // 激活指定的物体
-        if (objectToActivate != null)
+        if (isOverlapping)
         {
-            objectToActivate.SetActive(true);
+            gameObject.SetActive(false);
+
+            if (objectToActivate != null)
+            {
+                objectToActivate.SetActive(true);
+            }
+            else
+            {
+                Debug.LogWarning("需要激活的物体已被销毁或未设置！");
+            }
         }
 
         isCountingDown = false;
+        countdownCoroutine = null;
     }
 }

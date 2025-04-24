@@ -327,7 +327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -285, y: -18}
+  m_AnchoredPosition: {x: -285, y: -151}
   m_SizeDelta: {x: 628.7512, y: 81.3871}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &57975102
@@ -1214,8 +1214,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -281, y: 119}
-  m_SizeDelta: {x: 628.7512, y: 81.3871}
+  m_AnchoredPosition: {x: -281, y: 4.4827}
+  m_SizeDelta: {x: 628.7512, y: 310.4217}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &756419465
 MonoBehaviour:
@@ -1249,8 +1249,9 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "\u5236\u4F5C\u4EBA\u5458\uFF1A\u5434\u5B87\u8D85"
+    m_LineSpacing: 1.14
+  m_Text: "\u5236\u4F5C\u4EBA\u5458\uFF1A\u5434\u5B87\u8D85\n\t\t \t  \u9093\u5EFA\u5B8F\n\t\t\t 
+    \u6C6A\u5FD7\u946B"
 --- !u!222 &756419466
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1468,7 +1469,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeSceneButton: {fileID: 1124183110}
-  targetScene: {fileID: 102900000, guid: bdfc88d7ef8d1d84a840fa3aaf1f361d, type: 3}
   targetSceneName: Ani1
   displayImage: {fileID: 844143091}
   fadeDuration: 1
@@ -1759,7 +1759,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeSceneButton: {fileID: 1732440081}
-  targetScene: {fileID: 102900000, guid: d852f75bd9e483f4c9981ff32b4f1c60, type: 3}
   targetSceneName: MenuA
   displayImage: {fileID: 702950440}
   fadeDuration: 1
