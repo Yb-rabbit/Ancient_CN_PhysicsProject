@@ -170,6 +170,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5142420630892149545, guid: 2abb00853ed227046b37bd47dc92d15d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cf59dca2ef10e1a4b8075528e76eedea, type: 3}
     - target: {fileID: 6600593838098554860, guid: 2abb00853ed227046b37bd47dc92d15d, type: 3}
       propertyPath: m_Name
       value: MusicD
@@ -531,7 +535,7 @@ Transform:
   m_GameObject: {fileID: 776411215}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.11, y: 4.34, z: 1.53}
+  m_LocalPosition: {x: -0.11, y: 4.34, z: 1.06}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -940,13 +944,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105671963}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.0026179885, w: 0.9999966}
   m_LocalPosition: {x: 0.68, y: -1.26, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.3}
 --- !u!114 &1105671968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,7 +964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1984764828}
-  countdownTime: 1
+  countdownTime: 2
   objectToActivate: {fileID: 1472114191}
 --- !u!61 &1105671969
 BoxCollider2D:
@@ -1752,7 +1756,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1805,7 +1809,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1923,7 +1927,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.45
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -2612,7 +2616,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -2623,21 +2627,21 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
+          value: 1
           inSlope: 0
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
+          value: 0
+          inSlope: -0.1337661
+          outSlope: -0.1337661
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.19417495
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -2936,7 +2940,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -2945,7 +2949,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -2969,7 +2973,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -3004,8 +3008,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 0
-    mode: 0
+    enabled: 1
+    mode: 1
     timeMode: 0
     fps: 30
     frameOverTime:
@@ -3123,7 +3127,10 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 0}
+    - sprite: {fileID: -541798002, guid: 8cc823f3edea2904b83a65b9d023699c, type: 3}
+    - sprite: {fileID: -460025417, guid: 8cc823f3edea2904b83a65b9d023699c, type: 3}
+    - sprite: {fileID: -1355740229, guid: 8cc823f3edea2904b83a65b9d023699c, type: 3}
+    - sprite: {fileID: 15330181, guid: 8cc823f3edea2904b83a65b9d023699c, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -6401,7 +6408,7 @@ Transform:
   m_GameObject: {fileID: 1704515066}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.11, y: -5.0431027, z: -1}
+  m_LocalPosition: {x: 0.11, y: -4.6, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6502,9 +6509,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0015301704, y: 0}
+  m_Offset: {x: 0.0015301704, y: 0.0037753582}
   serializedVersion: 2
-  m_Radius: 0.6166172
+  m_Radius: 0.6354941
 --- !u!212 &1984764832
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6572,7 +6579,7 @@ MonoBehaviour:
   target: {fileID: 435657652}
   enableFollow: 1
   smoothSpeed: 2
-  maxRadius: 50
+  maxRadius: 20
 --- !u!1001 &3121012402497822327
 PrefabInstance:
   m_ObjectHideFlags: 0
