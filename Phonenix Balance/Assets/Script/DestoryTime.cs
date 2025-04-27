@@ -11,7 +11,10 @@ public class DestoryTime : MonoBehaviour
     private float countdownTime = 3f;
 
     [SerializeField]
-    private GameObject objectToActivate;
+    private GameObject defaultObjectToActivate;
+
+    [SerializeField]
+    private List<GameObject> additionalObjectsToActivate; // 激活多个物体
 
     private Collider2D spriteMaskCollider;
     private Collider2D targetCollider;
@@ -41,13 +44,26 @@ public class DestoryTime : MonoBehaviour
             Debug.LogError("未指定目标物体！");
         }
 
-        if (objectToActivate != null)
+        // 默认激活物体初始化
+        if (defaultObjectToActivate != null)
         {
-            objectToActivate.SetActive(false);
+            defaultObjectToActivate.SetActive(false);
         }
         else
         {
-            Debug.LogError("未指定需要激活的物体！");
+            Debug.LogError("未指定默认需要激活的物体！");
+        }
+
+        // 初始化其他需要激活的物体
+        if (additionalObjectsToActivate != null && additionalObjectsToActivate.Count > 0)
+        {
+            foreach (var obj in additionalObjectsToActivate)
+            {
+                if (obj != null)
+                {
+                    obj.SetActive(false);
+                }
+            }
         }
     }
 
@@ -94,13 +110,26 @@ public class DestoryTime : MonoBehaviour
         {
             gameObject.SetActive(false);
 
-            if (objectToActivate != null)
+            // 激活默认物体
+            if (defaultObjectToActivate != null)
             {
-                objectToActivate.SetActive(true);
+                defaultObjectToActivate.SetActive(true);
             }
             else
             {
-                Debug.LogWarning("需要激活的物体已被销毁或未设置！");
+                Debug.LogWarning("默认需要激活的物体已被销毁或未设置！");
+            }
+
+            // 激活其他物体
+            if (additionalObjectsToActivate != null && additionalObjectsToActivate.Count > 0)
+            {
+                foreach (var obj in additionalObjectsToActivate)
+                {
+                    if (obj != null)
+                    {
+                        obj.SetActive(true);
+                    }
+                }
             }
         }
 

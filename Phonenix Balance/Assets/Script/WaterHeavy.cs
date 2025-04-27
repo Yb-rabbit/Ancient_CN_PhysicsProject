@@ -7,10 +7,12 @@ public class WaterHeavy : MonoBehaviour
     private Rigidbody2D rb2D;
     public float maxMass = 10f; // 最大质量
     public float minMass = 1f;  // 最小质量
+    public float midMass = 5f;  // 中间质量
 
     // 指定需要检测的物体
-    public GameObject massAObject;
-    public GameObject massBObject;
+    public GameObject massAObject; //水第一层
+    public GameObject massBObject; //激活点
+    public GameObject massCObject; //凤衡点
 
     private void Start()
     {
@@ -22,7 +24,7 @@ public class WaterHeavy : MonoBehaviour
         }
 
         // 检查目标物体是否已分配
-        if (massAObject == null || massBObject == null)
+        if (massAObject == null || massBObject == null || massCObject == null)
         {
             Debug.LogError("目标物体未正确分配！");
         }
@@ -30,11 +32,17 @@ public class WaterHeavy : MonoBehaviour
 
     private void Update()
     {
-        // 根据激活状态直接设置质量
-        if (massBObject != null && massBObject.activeInHierarchy)
+        // 如果 C 物体处于激活状态，直接将质量设置为中间值
+        if (massCObject != null && massCObject.activeInHierarchy)
+        {
+            rb2D.mass = midMass;
+        }
+        // 如果 B 物体处于激活状态，直接将质量设置为最大
+        else if (massBObject != null && massBObject.activeInHierarchy)
         {
             rb2D.mass = maxMass;
         }
+        // 如果 A 物体处于激活状态，直接将质量设置为最小
         else if (massAObject != null && massAObject.activeInHierarchy)
         {
             rb2D.mass = minMass;
