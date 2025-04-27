@@ -2173,6 +2173,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoilWalls
       objectReference: {fileID: 0}
+    - target: {fileID: 5303680603301250306, guid: 20f118ad5a350214ba813ab1d1332682, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303680603301250306, guid: 20f118ad5a350214ba813ab1d1332682, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348099486775515120, guid: 20f118ad5a350214ba813ab1d1332682, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348099486775515120, guid: 20f118ad5a350214ba813ab1d1332682, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

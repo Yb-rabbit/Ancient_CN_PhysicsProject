@@ -1267,7 +1267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &368837539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1374,8 +1374,8 @@ Transform:
   m_GameObject: {fileID: 368837538}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.1, y: -4.49, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.9, y: -4.805, z: 0}
+  m_LocalScale: {x: 1, y: 0.4289, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4114,7 +4114,7 @@ Transform:
   m_GameObject: {fileID: 1518184276}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.56, z: -10}
+  m_LocalPosition: {x: 0, y: -0.59, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4361,9 +4361,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fccc761a6e35052438d1642f1acf399d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMass: 10
-  minMass: 3
-  massChangeRate: 1
+  maxMass: 15
+  minMass: 5
+  massAObject: {fileID: 1686632556}
+  massBObject: {fileID: 368837538}
 --- !u!1 &1618337076
 GameObject:
   m_ObjectHideFlags: 0
@@ -4619,7 +4620,7 @@ Transform:
   m_GameObject: {fileID: 1686632556}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.17, y: -6.81, z: 0}
+  m_LocalPosition: {x: 5.17, y: -7.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5096,6 +5097,22 @@ PrefabInstance:
     - target: {fileID: 5121069267668649840, guid: 20f118ad5a350214ba813ab1d1332682, type: 3}
       propertyPath: m_Color.r
       value: 0.5613208
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303680603301250306, guid: 20f118ad5a350214ba813ab1d1332682, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303680603301250306, guid: 20f118ad5a350214ba813ab1d1332682, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348099486775515120, guid: 20f118ad5a350214ba813ab1d1332682, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348099486775515120, guid: 20f118ad5a350214ba813ab1d1332682, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7486545337365153479, guid: 20f118ad5a350214ba813ab1d1332682, type: 3}
       propertyPath: m_LocalScale.x
