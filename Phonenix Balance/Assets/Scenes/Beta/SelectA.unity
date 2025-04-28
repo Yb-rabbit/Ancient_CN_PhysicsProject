@@ -1797,6 +1797,7 @@ GameObject:
   - component: {fileID: 1146545462}
   - component: {fileID: 1146545461}
   - component: {fileID: 1146545466}
+  - component: {fileID: 1146545467}
   m_Layer: 0
   m_Name: BridB
   m_TagString: Untagged
@@ -1838,7 +1839,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146545460}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 200586108d66f0a41b4984cb637f7b72, type: 3}
   m_Name: 
@@ -1945,6 +1946,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.0025678533}
   serializedVersion: 2
   m_Radius: 0.5459696
+--- !u!114 &1146545467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146545460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b172507d2bf6a4689b2d9bea680fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1374989548
 GameObject:
   m_ObjectHideFlags: 0
