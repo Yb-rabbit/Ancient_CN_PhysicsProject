@@ -8,12 +8,12 @@ public class Movement_Four : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         Vector2 position = transform.position;  
-        position.x = position.x + 0.05f * horizontal;    
+        position.x = position.x + 0.02f * horizontal;    
         transform.position = position;
 
         float vertical = Input.GetAxis("Vertical");
         Vector2 position2 = transform.position;
-        position2.y = position2.y + 0.05f * vertical;
+        position2.y = position2.y + 0.02f * vertical;
         transform.position = position2;
     }
 }

@@ -789,6 +789,7 @@ GameObject:
   - component: {fileID: 497268703}
   - component: {fileID: 497268702}
   - component: {fileID: 497268705}
+  - component: {fileID: 497268706}
   m_Layer: 7
   m_Name: ControlOBJ
   m_TagString: PlaceC
@@ -935,6 +936,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &497268706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497268701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b172507d2bf6a4689b2d9bea680fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &498440654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,6 +1714,7 @@ GameObject:
   m_Component:
   - component: {fileID: 889643889}
   - component: {fileID: 889643890}
+  - component: {fileID: 889643891}
   m_Layer: 5
   m_Name: ControlForward
   m_TagString: Untagged
@@ -1742,6 +1756,20 @@ MonoBehaviour:
   scrollbar: {fileID: 1054681438}
   targetObject: {fileID: 100769847}
   rotationSpeed: 2
+--- !u!114 &889643891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889643888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b6f2c4ce05e0d947a186a2a2e88e2bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollbar: {fileID: 1054681438}
+  numberOfSteps: 4
 --- !u!1 &929105589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2271,6 +2299,10 @@ PrefabInstance:
     - target: {fileID: 8588746327770791118, guid: 33ddfa61a83699c4c8989afd63ffda25, type: 3}
       propertyPath: m_Name
       value: PhonenixAID
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588746327770791118, guid: 33ddfa61a83699c4c8989afd63ffda25, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
