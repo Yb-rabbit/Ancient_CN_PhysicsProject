@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeSceneButton: {fileID: 768467236}
-  targetSceneName: Balance2
+  targetSceneName: Balance3
   displayImage: {fileID: 1143283859}
   fadeDuration: 1
   displayDuration: 3
