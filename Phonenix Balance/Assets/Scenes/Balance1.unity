@@ -2294,10 +2294,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 435657646}
-  moveDistance: 0.25
-  moveDuration: 0.09
-  cooldownTime: 0.1
-  maxCollisionCount: 20
+  moveDistance: 0.23
+  moveDuration: 0.04
+  cooldownTime: 0.003
+  maxCollisionCount: 50
   objectsToActivate:
   - {fileID: 1401607954}
   - {fileID: 1704515066}

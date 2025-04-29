@@ -1829,7 +1829,11 @@ PrefabInstance:
     - target: {fileID: 5142420630892149545, guid: 2abb00853ed227046b37bd47dc92d15d, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: cf59dca2ef10e1a4b8075528e76eedea, type: 3}
+      objectReference: {fileID: 8300000, guid: 8a899b66adeb88640a0c73e7136860de, type: 3}
+    - target: {fileID: 5142420630892149545, guid: 2abb00853ed227046b37bd47dc92d15d, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: e554fa81e80519042adeb1317e7b9253, type: 2}
     - target: {fileID: 6600593838098554860, guid: 2abb00853ed227046b37bd47dc92d15d, type: 3}
       propertyPath: m_Name
       value: MusicD
