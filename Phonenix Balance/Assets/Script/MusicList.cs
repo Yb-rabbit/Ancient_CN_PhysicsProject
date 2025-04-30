@@ -9,6 +9,7 @@ public class MusicList : MonoBehaviour
     public List<AudioClip> musicClips; // 音频剪辑列表
     public List<AudioMixerGroup> mixerGroups; // 混音器轨道列表
     public float delayInSeconds = 5f; // 延迟秒数
+    public bool playInOrder = true; // 是否按顺序播放
 
     private AudioSource audioSource;
     private int currentClipIndex = 0;
@@ -31,10 +32,16 @@ public class MusicList : MonoBehaviour
     {
         if (firstClipPlayed && !audioSource.isPlaying)
         {
-            PlayNextClip();
+            if (playInOrder)
+            {
+                PlayNextClipInOrder();
+            }
+            else
+            {
+                PlayNextClipWithLoop();
+            }
         }
     }
-
 
     IEnumerator PlayFirstClipWithDelay()
     {
@@ -59,7 +66,16 @@ public class MusicList : MonoBehaviour
         audioSource.Play();
     }
 
-    private void PlayNextClip()
+    private void PlayNextClipInOrder()
+    {
+        currentClipIndex++;
+        if (currentClipIndex < musicClips.Count)
+        {
+            PlayCurrentClip();
+        }
+    }
+
+    private void PlayNextClipWithLoop()
     {
         currentClipIndex = (currentClipIndex + 1) % musicClips.Count;
         PlayCurrentClip();
