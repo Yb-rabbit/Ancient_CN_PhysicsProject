@@ -13,6 +13,19 @@ public class SceneCheckOV : MonoBehaviour
     public float delayBeforeLoad = 2.0f; // 跳转前的延迟时间
 
     private HashSet<string> visitedScenes = new HashSet<string>(); // 已访问的场景集合
+    private static SceneCheckOV instance;
+
+    void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject); // 销毁重复的实例
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Start()
     {
@@ -26,9 +39,6 @@ public class SceneCheckOV : MonoBehaviour
         {
             Debug.LogError("Target scene is not set. Please specify it in the Inspector.");
         }
-
-        // 确保当前对象在场景切换时不被销毁
-        DontDestroyOnLoad(gameObject);
 
         if (transitionImage != null)
         {
@@ -45,7 +55,6 @@ public class SceneCheckOV : MonoBehaviour
         }
     }
 
-    // 记录场景访问
     public void MarkSceneAsVisited(string sceneName)
     {
         if (requiredScenes.Contains(sceneName))
@@ -59,7 +68,6 @@ public class SceneCheckOV : MonoBehaviour
         }
     }
 
-    // 检查是否可以跳转到目标场景
     public void TryLoadTargetScene()
     {
         if (AllRequiredScenesVisited())
@@ -73,21 +81,43 @@ public class SceneCheckOV : MonoBehaviour
         }
     }
 
-    // 显示图片并延迟跳转场景
     private IEnumerator ShowImageAndLoadScene()
     {
-        if (transitionImage != null)
+        if (transitionImage == null)
         {
-            transitionImage.gameObject.SetActive(true); // 显示图片
-            yield return StartCoroutine(FadeImage(0, 1, fadeDuration)); // 渐变显示图片
+            GameObject imageObject = GameObject.Find("TransitionImage");
+            if (imageObject != null)
+            {
+                transitionImage = imageObject.GetComponent<Image>();
+            }
+
+            if (transitionImage == null)
+            {
+                Debug.LogWarning("Transition image not found. Creating a new one.");
+                GameObject canvasObject = new GameObject("TransitionCanvas");
+                Canvas canvas = canvasObject.AddComponent<Canvas>();
+                canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+                DontDestroyOnLoad(canvasObject);
+
+                GameObject imageObjectNew = new GameObject("TransitionImage");
+                imageObjectNew.transform.SetParent(canvasObject.transform);
+                transitionImage = imageObjectNew.AddComponent<Image>();
+                transitionImage.color = new Color(0, 0, 0, 0); // 初始为透明
+                RectTransform rectTransform = transitionImage.GetComponent<RectTransform>();
+                rectTransform.anchorMin = Vector2.zero;
+                rectTransform.anchorMax = Vector2.one;
+                rectTransform.sizeDelta = Vector2.zero;
+            }
         }
 
-        yield return new WaitForSeconds(delayBeforeLoad); // 等待指定时间
+        transitionImage.gameObject.SetActive(true);
+        yield return StartCoroutine(FadeImage(0, 1, fadeDuration));
 
-        SceneManager.LoadScene(targetScene); // 跳转到目标场景
+        yield return new WaitForSeconds(delayBeforeLoad);
+
+        SceneManager.LoadScene(targetScene);
     }
 
-    // 图片渐变效果
     private IEnumerator FadeImage(float startAlpha, float endAlpha, float duration)
     {
         if (transitionImage == null)
@@ -111,7 +141,6 @@ public class SceneCheckOV : MonoBehaviour
         transitionImage.color = color;
     }
 
-    // 检查是否所有指定场景都已访问
     private bool AllRequiredScenesVisited()
     {
         foreach (string scene in requiredScenes)
