@@ -8914,6 +8914,18 @@ PrefabInstance:
       propertyPath: m_Text
       value: "\u901A\u8FC7\u5267\u70C8\u7684\u78B0\u649E\uFF0C\u4EA7\u751F\u5DE8\u5927\u7684\u6ED1\u52A8\u6469\u64E6\u529B\uFF0C\n\u6700\u7EC8\u4EA7\u751F\u7684\u70ED\u91CF\u5316\u4E3A\u706B\u661F\uFF0C\u518D\u901A\u8FC7\u70B9\u71C3\u63D0\u524D\n\u51C6\u5907\u7684\u6613\u71C3\u7269\u6765\u751F\u706B"
       objectReference: {fileID: 0}
+    - target: {fileID: 4161096841173812908, guid: 6a319d0bbe4698648bdc458c39ad59a8, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161096841173812908, guid: 6a319d0bbe4698648bdc458c39ad59a8, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161096841173812908, guid: 6a319d0bbe4698648bdc458c39ad59a8, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 5554222525632951146, guid: 6a319d0bbe4698648bdc458c39ad59a8, type: 3}
       propertyPath: m_Name
       value: Canvas2F
