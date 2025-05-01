@@ -3394,7 +3394,7 @@ MonoBehaviour:
   targetSceneName: Ani1
   displayImage: {fileID: 5051102225357994011}
   fadeDuration: 1
-  displayDuration: 3
+  displayDuration: 4
 --- !u!1 &1557864126
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,7 +3495,7 @@ MonoBehaviour:
   targetSceneName: Ani2
   displayImage: {fileID: 5051102226093327956}
   fadeDuration: 1
-  displayDuration: 3
+  displayDuration: 4
 --- !u!114 &1586301554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3512,7 +3512,7 @@ MonoBehaviour:
   targetSceneName: Ani3
   displayImage: {fileID: 5051102225989327203}
   fadeDuration: 1
-  displayDuration: 3
+  displayDuration: 4
 --- !u!1 &1602391363
 GameObject:
   m_ObjectHideFlags: 0
@@ -4727,7 +4727,6 @@ GameObject:
   - component: {fileID: 2010956192}
   - component: {fileID: 2010956191}
   - component: {fileID: 2010956190}
-  - component: {fileID: 2010956189}
   - component: {fileID: 2010956193}
   m_Layer: 5
   m_Name: Button (Over)
@@ -4756,23 +4755,6 @@ RectTransform:
   m_AnchoredPosition: {x: -809, y: 476}
   m_SizeDelta: {x: 228.0905, y: 56.1886}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2010956189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2010956187}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84e6a7493c5d3c1458e945f238f31de3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  changeSceneButton: {fileID: 2010956190}
-  targetSceneName: LastBalance
-  displayImage: {fileID: 232409967}
-  fadeDuration: 1
-  displayDuration: 3
 --- !u!114 &2010956190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4884,8 +4866,8 @@ MonoBehaviour:
   targetObject: {fileID: 1095607079}
   buttonA: {fileID: 776351989}
   buttonB: {fileID: 1675525339}
-  fadeDuration: 2
-  delayBeforeLoad: 3
+  fadeDuration: 1
+  delayBeforeLoad: 4
 --- !u!1 &2031054406
 GameObject:
   m_ObjectHideFlags: 0
