@@ -7,7 +7,6 @@ public class StoneBHit : MonoBehaviour
     public GameObject targetObject; // 碰撞检测的目标物体
     public float moveDistance = 1.0f; // 移动的距离
     public float moveDuration = 0.5f; // 平滑移动的时间
-    public float cooldownTime = 2.0f; // 恢复碰撞检测的延迟时间
     public int maxCollisionCount = 3; // 最大碰撞次数
     public List<GameObject> objectsToActivate; // 碰撞次数达到最大值时激活的物体列表
 
@@ -59,7 +58,7 @@ public class StoneBHit : MonoBehaviour
     {
         isMoving = true;
 
-        // 随机选择一个方向：左、右或下
+        // 随机选择一个方向：左或右
         Vector3 randomDirection = GetRandomDirection();
 
         // 平滑移动到目标位置
@@ -68,26 +67,13 @@ public class StoneBHit : MonoBehaviour
         // 平滑移动回原始位置
         yield return MoveToPosition(originalPosition, moveDuration);
 
-        yield return new WaitForSeconds(cooldownTime);
-
         isMoving = false;
     }
 
-    // 获取随机方向（左、右或下）
+    // 获取随机方向（左或右）
     private Vector3 GetRandomDirection()
     {
-        int randomIndex = Random.Range(0, 3); // 生成 0、1 或 2
-        switch (randomIndex)
-        {
-            case 0:
-                return Vector3.left; // 向左
-            case 1:
-                return Vector3.right; // 向右
-            case 2:
-                return Vector3.down; // 向下
-            default:
-                return Vector3.down; // 默认向下
-        }
+        return Random.Range(0, 2) == 0 ? Vector3.left : Vector3.right;
     }
 
     private IEnumerator MoveToPosition(Vector3 targetPosition, float duration)
