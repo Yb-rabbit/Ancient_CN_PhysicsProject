@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Beta/LastBalance.unity
     guid: 7f5b71f32181e2045ad7f5d39ce697a7
+  - enabled: 1
+    path: Assets/Scenes/Beta/DiffiEnd.unity
+    guid: fc40e8642fa8b5545bc921014f7a4faa
   m_configObjects: {}

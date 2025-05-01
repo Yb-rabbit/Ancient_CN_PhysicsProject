@@ -192,7 +192,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5347\u7EA7\u96BE\u5EA6\u6D4B\u8BD5"
+  m_Text: "\u4E86\u89E3\u66F4\u591A"
 --- !u!222 &87517668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeSceneButton: {fileID: 1789616893}
-  targetSceneName: SelectA
+  targetSceneName: DiffiEnd
   displayImage: {fileID: 1522929424}
   fadeDuration: 1
   displayDuration: 3
