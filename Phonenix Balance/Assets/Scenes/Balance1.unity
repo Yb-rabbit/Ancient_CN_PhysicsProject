@@ -1034,7 +1034,7 @@ Transform:
   m_GameObject: {fileID: 475795377}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.67559016, w: 0.7372774}
-  m_LocalPosition: {x: -12.440001, y: -0.40999997, z: 0}
+  m_LocalPosition: {x: -12.03, y: -0.40999997, z: 0}
   m_LocalScale: {x: 30, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1180,7 +1180,7 @@ Transform:
   m_GameObject: {fileID: 627870849}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.67559016, w: 0.7372774}
-  m_LocalPosition: {x: 9.559999, y: -0.40999997, z: 0}
+  m_LocalPosition: {x: 9.29, y: -0.40999997, z: 0}
   m_LocalScale: {x: 30, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1940,7 +1940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1984764828}
-  countdownTime: 1
+  countdownTime: 0.5
   defaultObjectToActivate: {fileID: 1472114191}
   additionalObjectsToActivate:
   - {fileID: 5231374875486664519}
@@ -2423,11 +2423,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 648141026538257394, guid: 20f118ad5a350214ba813ab1d1332682, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.41
+      value: 9.16
       objectReference: {fileID: 0}
     - target: {fileID: 952292333978005811, guid: 20f118ad5a350214ba813ab1d1332682, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.23
+      value: -11.86
       objectReference: {fileID: 0}
     - target: {fileID: 1709065185686493402, guid: 20f118ad5a350214ba813ab1d1332682, type: 3}
       propertyPath: m_Layer
@@ -9194,7 +9194,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.18775368, y: -0.3470599}
+  m_Offset: {x: -0.21955225, y: -0.39210787}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9205,7 +9205,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.37415433, y: 0.30588022}
+  m_Size: {x: 0.46954995, y: 0.49137193}
   m_EdgeRadius: 0
 --- !u!61 &7645594553669830350
 BoxCollider2D:
