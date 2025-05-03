@@ -192,7 +192,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4E86\u89E3\u66F4\u591A"
+  m_Text: "\u81EA\u7531\u63A2\u7D22"
 --- !u!222 &87517668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1383,7 +1383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 1938588819}
   fadeDuration: 2
-  delayBeforeExit: 1
+  delayBeforeExit: 2
 --- !u!1 &1696294449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,7 +1602,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 646, y: -403}
+  m_AnchoredPosition: {x: 649, y: -403}
   m_SizeDelta: {x: 307.9657, y: 99.3999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789616892
